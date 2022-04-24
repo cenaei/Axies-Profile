@@ -7,7 +7,6 @@ body {
   background-color: $background;
   color: $fullWhite;
   font-family: "Roboto", sans-serif;
-  margin: 0 4rem;
 }
 
 button {
@@ -73,15 +72,6 @@ button {
   // &__search {
 
   // }
-
-  &__wallet {
-    img {
-      margin: 0 2rem 0 0;
-    }
-    button {
-      padding: 1rem 2rem;
-    }
-  }
 
   &__theme {
     @include flexBetween(row);
