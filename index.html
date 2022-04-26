@@ -12,8 +12,8 @@
     <title>Edit Profile</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="header__up">
         <div class="header__logo">
           <img src="./assets/img/Logo.svg" alt="Axies Logo" />
         </div>
@@ -58,7 +58,9 @@
             </li>
           </ul>
         </div>
-        <div class="header__search">
+        <div class="header__logo">
+          <img src="./assets/img/icon/Search.svg" alt="Search" />
+          <img src="./assets/img/icon/Search.svg" alt="Search" />
           <img src="./assets/img/icon/Search.svg" alt="Search" />
         </div>
         <div class="header__theme">
@@ -69,7 +71,164 @@
             <img src="./assets/img/icon/moon.svg" alt="moon logo" />
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+      <hr />
+      <div class="header__down">
+        <div class="header__down--title">
+          <h1>Edit Profile</h1>
+        </div>
+        <div class="header__down--route">
+          <p>
+            Home <span>/</span> Pages <span>/</span> Author <span>/</span
+            ><span class="current">Edit Profile</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="left">
+        <div class="left__avatar">
+          <img src="./assets/img/avatar.jpg" alt="Avatar" />
+          <button>Upload New Photo</button>
+          <button>Delete</button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right__top">
+          <div class="right__top--title">Choice Your Cover Image</div>
+          <div class="right__top--detail">
+            <div class="right__top--upload">
+              <button>upload File</button>
+            </div>
+            <div class="right__top--covers">
+              <img
+                src="./assets/img/covers/1.jpg"
+                alt="Cover Photo"
+                width="300"
+                height="130"
+              />
+            </div>
+            <div class="right__top--covers">
+              <img
+                src="./assets/img/covers/1.jpg"
+                alt="Cover Photo"
+                width="300"
+                height="130"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="right__main">
+          <div class="right__main--left">
+            <h3>Account Info</h3>
+            <div class="right__main--name">
+              <h4>Display Name</h4>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="right__main--url">
+              <h4>Custom URL</h4>
+              <input type="url" name="url" id="url" />
+            </div>
+            <div class="right__main--email">
+              <h4>Email</h4>
+              <input type="email" name="mail" id="mail" />
+            </div>
+            <div class="right__main--bio">
+              <h4>Bio</h4>
+              <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="right__main--right">
+            <h3>Your Social Media</h3>
+            <div class="right__main--facebook">
+              <h4>Facebook</h4>
+              <input type="text" name="facebook" id="facebook" />
+              <button>Connect to Facebook</button>
+            </div>
+            <div class="right__main--twitter">
+              <h4>Twitter</h4>
+              <input type="text" name="twitter" id="twitter" />
+              <button>Connect to Twitter</button>
+            </div>
+            <div class="right__main--discord">
+              <h4>Discord</h4>
+              <input type="text" name="discord" id="discord" />
+              <button>Connect to Discord</button>
+            </div>
+          </div>
+        </div>
+        <div class="right__down">
+          <button>Update Profile</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__info">
+        <div class="footer__info--logo">
+          <img src="./assets/img/Logo.svg" alt="Axies Logo" />
+        </div>
+        <div class="footer__info--subtitle">
+          <p>
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br>
+            Aspernatur optio officia <br> 
+            corrupti ea maxime velit.
+          </p>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <h5>My Account</h5>
+        <ul>
+          <li>Authors</li>
+          <li>Collection</li>
+          <li>Author Profile</li>
+          <li>Create Item</li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h5>Resources</h5>
+        <ul>
+          <li>Help & Support</li>
+          <li>Live Auctions</li>
+          <li>Item Details</li>
+          <li>Activity</li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h5>Company</h5>
+        <ul>
+          <li>Explore</li>
+          <li>Contact Us</li>
+          <li>Our Blog</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div class="footer__us">
+        <h5>Subscribe Us</h5>
+        <input type="email" name="email" id="email" />
+        <div class="footer__us--socialmedia">
+          <a href="#twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#telegram">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="#youtube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="#discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
