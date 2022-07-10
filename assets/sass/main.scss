@@ -26,7 +26,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+
   &__up {
     @include flexBetween(row);
     width: 100%;
@@ -45,16 +45,16 @@ button {
             weight: 500;
           }
         }
-        
+
         i {
           position: absolute;
-          transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+          transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
-  
+
         &:hover i {
           transform: rotate(-180deg);
         }
-  
+
         ul {
           position: absolute !important;
           z-index: 99;
@@ -63,25 +63,25 @@ button {
           transition: all 0.5s ease;
           left: 0;
           display: none;
-  
+
           padding: 1rem;
           min-width: 15rem;
           // border-radius: 1.3rem !important;
           // Not Working
-  
+
           li {
             clear: both;
             background-color: $background-gray;
-            padding: .5rem;
+            padding: 0.5rem;
           }
         }
       }
     }
-  
+
     li:hover {
       cursor: pointer;
     }
-  
+
     ul li:hover > ul,
     ul li ul:hover {
       visibility: visible;
@@ -89,10 +89,10 @@ button {
       display: block;
     }
   }
-  
+
   &__down {
     @include flexBetween(column);
-    margin: 5rem auto; 
+    margin: 5rem auto;
 
     &--title {
       font-size: 5.2rem;
@@ -118,7 +118,7 @@ button {
       @include flexBetween(row);
       gap: 5rem;
       i {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         display: inline;
       }
     }
@@ -184,12 +184,12 @@ button {
         font: {
           size: 1.5rem;
         }
-
+        transition: transform 250ms ease-in-out;
         &:hover {
           font: {
             style: italic;
           }
-          
+          transform: scaleX(0.9);
         }
       }
     }
@@ -197,10 +197,10 @@ button {
 
   .right {
     @include flexBetween(column);
-    
+
     &__top {
       @include flexBetween(column);
-      
+
       &--title {
         font: {
           size: 2.2rem;
@@ -208,7 +208,7 @@ button {
         align-self: flex-start;
         margin-bottom: 1.5rem;
       }
-      
+
       &--detail {
         @include flexBetween(row);
       }
@@ -236,10 +236,15 @@ button {
         }
       }
     }
-    
+
     &__main {
-      @include flexBetween(row);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
       margin: 4rem 0;
+
 
       h3 {
         font: {
@@ -263,7 +268,7 @@ button {
         color: $white;
         border: 1px solid $purple;
         border-radius: 3rem;
-        margin:1rem .5rem 1.5rem;
+        margin: 1rem 0.5rem 1.5rem;
         padding: 1rem 2rem;
         font: {
           size: 1.4rem;
@@ -277,7 +282,7 @@ button {
         color: $white;
         border: 1px solid $purple;
         border-radius: 3rem;
-        margin:1rem .5rem 1.5rem;
+        margin: 1rem 0.5rem 1.5rem;
         padding: 1rem 2rem;
         font: {
           size: 1.4rem;
@@ -292,6 +297,7 @@ button {
           weight: 300;
         }
         margin-bottom: 1.5rem;
+        transition: background-color 300ms ease-in-out;
         &:hover {
           background-color: transparent;
         }
@@ -300,30 +306,36 @@ button {
       &--left {
         @include flexBetween(column);
         margin: 0 2rem;
-        width: 50%;
+        width: 100%;
         // justify-self: flex-start;
         // align-self: flex-start;
+        div {
+          width: 100%;
+        }
       }
-      
+
       &--right {
         @include flexBetween(column);
         margin: 0 2rem;
-        width: 50%;
+        width: 100%;
         // justify-self: flex-end;
         // align-self: flex-end;
       }
     }
-    
+
     &__down {
       margin: 1rem 0;
       button {
         font: {
           size: 1.4rem;
         }
+        transition: background-color 300ms ease-in-out;
+        &:hover {
+          background-color: $purple;
+        }
       }
       align-self: flex-start;
     }
-
   }
 }
 
@@ -388,10 +400,10 @@ button {
       @include flexBetween(row);
 
       a {
-        margin: 0 .3rem;
+        margin: 0 0.3rem;
         background-color: $darkerGray;
         color: $fullWhite;
-        padding: .5rem;
+        padding: 0.5rem;
         border-radius: 1rem;
         width: 4rem;
         text-align: center;
@@ -404,5 +416,4 @@ button {
       }
     }
   }
-
 }

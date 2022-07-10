@@ -137,7 +137,7 @@ button {
 .header__up ul li ul li {
   clear: both;
   background-color: #343444;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .header__up li:hover {
@@ -204,7 +204,7 @@ button {
 }
 
 .header__menu--items i {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   display: inline;
 }
 
@@ -296,10 +296,16 @@ button {
 
 .main .left__avatar button {
   font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .main .left__avatar button:hover {
   font-style: italic;
+  -webkit-transform: scaleX(0.9);
+          transform: scaleX(0.9);
 }
 
 .main .right {
@@ -392,19 +398,14 @@ button {
 }
 
 .main .right__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   margin: 4rem 0;
 }
 
@@ -428,7 +429,7 @@ button {
   color: #fcfcfc;
   border: 1px solid #4E3FEE;
   border-radius: 3rem;
-  margin: 1rem .5rem 1.5rem;
+  margin: 1rem 0.5rem 1.5rem;
   padding: 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 300;
@@ -440,7 +441,7 @@ button {
   color: #fcfcfc;
   border: 1px solid #4E3FEE;
   border-radius: 3rem;
-  margin: 1rem .5rem 1.5rem;
+  margin: 1rem 0.5rem 1.5rem;
   padding: 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 300;
@@ -451,6 +452,8 @@ button {
   font-size: 1.3rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .main .right__main button:hover {
@@ -472,7 +475,11 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 2rem;
-  width: 50%;
+  width: 100%;
+}
+
+.main .right__main--left div {
+  width: 100%;
 }
 
 .main .right__main--right {
@@ -490,7 +497,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 2rem;
-  width: 50%;
+  width: 100%;
 }
 
 .main .right__down {
@@ -501,6 +508,12 @@ button {
 
 .main .right__down button {
   font-size: 1.4rem;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+
+.main .right__down button:hover {
+  background-color: #4E3FEE;
 }
 
 .footer {
@@ -580,10 +593,10 @@ button {
 }
 
 .footer__us--socialmedia a {
-  margin: 0 .3rem;
+  margin: 0 0.3rem;
   background-color: #171427;
   color: #fff;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   width: 4rem;
   text-align: center;
