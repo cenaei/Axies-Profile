@@ -212,6 +212,10 @@ button {
   margin: 0 2rem;
 }
 
+.header__search:hover {
+  cursor: pointer;
+}
+
 .header__wallet img {
   margin: 0 2rem 0 0;
 }
@@ -219,6 +223,12 @@ button {
 .header__wallet button {
   background-color: transparent !important;
   padding: 1rem 2rem;
+  -webkit-transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out;
+}
+
+.header__wallet button:hover {
+  background-color: #4E3FEE !important;
 }
 
 .header__theme {

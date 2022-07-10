@@ -130,6 +130,12 @@ button {
     }
   }
 
+  &__search {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__wallet {
     img {
       margin: 0 2rem 0 0;
@@ -137,6 +143,10 @@ button {
     button {
       background-color: transparent !important;
       padding: 1rem 2rem;
+      transition: background-color 250ms ease-in-out;
+      &:hover {
+        background-color: $purple !important;
+      }
     }
   }
 
