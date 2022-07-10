@@ -340,7 +340,7 @@ button {
 }
 
 .footer {
-  background-color: $fullBlack;
+  background-color: Black;
   @include flexBetween(row);
   padding: 4rem 10rem 5rem;
 
@@ -375,6 +375,7 @@ button {
         margin: 1.7rem 0;
         &:hover {
           cursor: pointer;
+          color: $purple;
         }
       }
     }
@@ -383,16 +384,26 @@ button {
   &__us {
     align-self: flex-start;
 
-    input {
-      background-color: transparent;
+    .email {
       border: 1px solid $purple;
       border-radius: 1rem;
-      font: {
-        size: 1.5rem;
-        weight: 400;
+      @include flexBetween(row);
+      i {
+        margin-right: 1rem;
+        font-size: 1.4rem;
+        &:hover {cursor: pointer;}
       }
-      padding: 1rem 2rem;
-      color: $fullWhite;
+      input {
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        font: {
+          size: 1.5rem;
+          weight: 400;
+        }
+        padding: 1rem 2rem;
+        color: $fullWhite;
+      }
     }
 
     &--socialmedia {
@@ -401,13 +412,20 @@ button {
 
       a {
         margin: 0 0.3rem;
-        background-color: $darkerGray;
-        color: $fullWhite;
         padding: 0.5rem;
+        background-color: $darkGray;
+        color: $fullWhite;
         border-radius: 1rem;
         width: 4rem;
-        text-align: center;
+        height: 4rem;
+        // text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: background-color 250ms ease-in-out;
         i {
+          text-align: center;
           font-size: 2rem;
         }
         &:hover {
